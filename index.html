@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: powderblue;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #newdisplay{
+            background: whitesmoke;
+            text-align: center;
+        }
+
+        #newp{
+            font-style: italic; 
+        }
+
+        #textinput{
+            width: 500px;
+            height: 80px;
+        }
+        
+    </style>
+
+    <!-- JQ Lib-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Sentiment API</title>
+</head>
+
+<body>
+
+<h1>Sentiment API - Test Site</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="inputTrainName">Enter text to get the sentiment</label>
+            <input type="text" class="form-control" id="textinput" placeholder="Enter Text">
+            <br>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+    </form>
+
+    <br>
+    <br>
+
+    <div id="display">
+
+
+    </div>
+
+
+
+</body>
+<!-- JS Link -->
+<script type="text/javascript" src="logic.js"></script>
+
+</html>
