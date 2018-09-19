@@ -85,8 +85,6 @@
 
 console.log("Linked");
 
-sentiment = new Sentimood();
-
 // On click run API Call
 $("#submit").on("click", function (event) {
     event.preventDefault();
@@ -104,12 +102,18 @@ $("#submit").on("click", function (event) {
     else{
     
     
-    // ------------
+    // GET request to Tweet Sentiment Analysis, log response object and append sentiment data to display div
 
-    // ADD CODE HERE TO RUN SENTIMOOD 
 
-  
-    //   $("#display").prepend("<br><div id=newdisplay> <h1> Text: "+ '\u0022' + response.string + '\u0022' + "</h1> <p id='newp'>The Statement was <strong>" + response.sentiment + "</strong> with a score of <strong>" + response.score + "</strong>!</p></div>");
+    var sentimood = new Sentimood();
+    var analysis = sentimood.analyze(queryText);
+
+    console.log(analysis)
+
+    console.log(analysis.score)
+    
+    $("#display").prepend("<br><div id=newdisplay> <h1> Text: "+ '\u0022' + queryText + '\u0022' + "</h1> <p id='newp'>The Statement had a score of <strong>" + analysis.score + "</strong>!</p></div>");
+
   
     };
   
